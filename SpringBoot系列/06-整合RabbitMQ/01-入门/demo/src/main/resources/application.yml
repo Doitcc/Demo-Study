@@ -1,0 +1,44 @@
+server:
+  port: 80
+
+
+# 配置日志地址
+logging:
+  config: classpath:logback-spring.xml
+
+
+# Knife4j接口文档
+knife4j:
+  enable: true
+  basic:
+    enable: false
+    username: admin
+    password: 123456
+  openapi:
+    title: 在线文档
+    description: "API文档"
+    concat: zhengqingya
+    email: zhengqingya@it.com
+    url: http://gitee.com/zhengqingya
+    version: v1.0.0
+    license: MIT
+    group:
+      demo:
+        group-name: demo
+        api-rule: package
+        api-rule-resources:
+          - com.zhengqing.demo
+
+
+spring:
+  application:
+    name: demo
+
+  # RabbitMQ配置
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    # 填写自己安装rabbitmq时设置的账号密码，默认账号密码为`guest`
+    username: admin
+    password: admin
+    virtual-host: my_vhost # 填写自己的虚拟机名，对应可查看 `127.0.0.1:15672/#/users` 下Admin中的`Can access virtual hosts`信息

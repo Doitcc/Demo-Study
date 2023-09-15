@@ -1,0 +1,7 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+target
+doc/docker-compose/kafka
